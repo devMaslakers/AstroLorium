@@ -1,5 +1,16 @@
 @media screen and (max-width: 1200px) {
+    nav {
+        background-color: rgba(0, 0, 0, 0);
+    }
     .menu {
-        background-color: red;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu > li {
+        width: 100vw;
+    }
+    .menu > .logo {
+        width: 100vw;
+        background-color: rgba(0, 98, 245, 0.1);
     }
 }
