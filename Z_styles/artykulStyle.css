@@ -1,0 +1,105 @@
+#artykul {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 35vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#artykul > p {
+    display: block;
+    width: 95%;
+    margin-bottom: 0;
+    font-family: 'fast_handregular', sans-serif;
+}
+#artykul > .artContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#artykul .artGridContainer {
+    width: 85%;
+    height: 85%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 1vw;
+}
+.artContainer > .artGridContainer > div {
+    border: 0.1vw solid #e7e7e7;
+    border-radius: 1.2vw;
+    cursor: pointer;
+}
+.artGridContainer > div:hover {
+    background-color: rgba(231, 231, 231, 0.5);
+    transition: 0.3s;
+}
+
+.artElement:nth-child(1){
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.artElement:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 1/3;
+}
+.artElement:nth-child(3){
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+.artElement:nth-child(1) > div {
+    background-image: url("../zdjecia/galeria/artemis.jpg");
+}
+.artElement:nth-child(2) > div {
+    background-image: url("../zdjecia/galeria/webb3.jpg");
+}
+.artElement:nth-child(3) > div {
+    background-image: url("../zdjecia/galeria/timeCrystal.jpg");
+}
+
+.artContainer div {
+    border-radius: 1.2vw;
+}
+
+
+.artContainer p {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.2vw;
+    text-align: center;
+}
+
+    
+.artElement > div {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+}
+.artElement > div:hover .artNakladka {
+    background-color: rgb(30, 30, 30);
+}
+
+.artElement .artNakladka {
+    height: 20%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+.artElement .artWypelniacz {
+    height: 80%;
+    width: 100%;
+}
+
+.artContainer {
+    border: 0.1vw solid #e7e7e7;;
+    border-radius: 1.2vw;
+    width: 100%;
+    height: 68vh;
+}
+

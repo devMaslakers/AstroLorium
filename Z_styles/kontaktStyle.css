@@ -1,0 +1,84 @@
+#kontaktBackPanel {
+    background-color: black;
+    position: fixed;
+    z-index: 10;
+
+    width: 100vw;
+    height: 100vh;
+    top: -100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2vw;
+    color: #e7e7e7;
+}
+
+.kontaktCloseButton {
+    position: absolute;
+    top: 3vw;
+    right: 3vw;
+
+    width: 6vw;
+    height: 6vw;
+    cursor: pointer;   
+}
+.kontaktCloseButton:hover {
+    transition: 0.3s;
+    transition: scale(1.1);
+}
+
+.kontaktNewsPanel {
+    width: 35%;
+    height: 100%;
+
+    text-align: center;
+}
+.kontaktNewsPanel input, p, button{
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: block;
+}
+
+.kontaktNewsPanel input {
+    width: 100%;
+    height: 15%;
+
+    font-size: 3vw;
+
+    border-radius: 0.5vw;
+    color: #e7e7e7;
+    background-color: rgba(2, 90, 120, 0.5);
+    border: none;
+}
+.kontaktNewsPanel button {
+    width: 65%;
+    height: 10%;
+
+    font-size: 2vw;
+
+    border-radius: 0.5vw;
+    border: none;
+    color: #e7e7e7;
+    background-color: rgba(2, 90, 120, 0.5);
+
+    cursor: pointer;
+}
+.kontaktNewsPanel button:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
+    background-color: rgba(2, 90, 120, 0.4);
+}
+
+@media screen and (max-width:1000px) {
+    .kontaktNewsPanel {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .kontaktNewsPanel {
+        width: 60%;
+    }
+}
