@@ -81,7 +81,7 @@ header {
     flex-wrap: wrap;
 
     width: 60vw;
-    height: 300px;
+    height: 40vh;
 }
 .tekstWstepny p, q {
     text-align: center;

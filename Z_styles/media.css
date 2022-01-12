@@ -13,4 +13,66 @@
         width: 100vw;
         background-color: rgba(0, 98, 245, 0.1);
     }
+    header {
+        margin-top: 25vh;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .artGridContainer {
+
+        grid-template-columns: 1fr !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+        row-gap: 1vw;
+    }
+
+    #artykul .artElement:nth-child(1){
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #artykul .artElement:nth-child(2){
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #artykul .artElement:nth-child(3){
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    #artykul .artContainer {
+        height: 120vw !important;
+    }
+
+    .artContainer p {
+        font-size: 2vw !important;
+    }
+
+}
+@media screen and (max-width: 800px) {
+    html {
+        text-overflow: ellipsis;
+    }
+
+    .menu li {
+        height: 16vh !important;
+    }
+    .menu a {
+        font-size: 5vw !important;
+    }
+    .logo a {
+        font-size: 7vw !important;
+    }
+
+
+    .tekstWstepny {
+        width: 85% !important;
+    }
+
+    .tekstWstepny p, q {
+        font-size: 5vw !important;
+    }
+
+    .artNakladka {
+        font-size: 2.5vw;
+    }
 }
