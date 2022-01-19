@@ -33,3 +33,27 @@ q{
 a {
     font-size: 1.6rem;
 }
+
+.liAktywny {
+    display: flex !important;
+    transform: translateY(0px) !important;
+    transition: 0s !important;
+}
+
+.liPrzejscie_one {
+    display: flex !important;
+    transition: 0.7s !important;
+    transform: translateY(-700px) !important;
+}
+
+.liPrzejscie_two {
+    display: flex !important;
+    transition: 0.7s !important;
+    transform: translateY(0px) !important;
+}
+
+.liNieaktywny {
+    display: none !important;
+    transform: translateY(-700px) !important;
+    transition: 0.7s !important;
+}

@@ -4,6 +4,7 @@ window.addEventListener('load', function(){
     const isLoaded = backgroundIMG.complete && backgroundIMG.naturalHeight !==0;
     if(isLoaded){
         wylonObraz(backgroundIMG);
+        menuHamburger();
     }
 })
 
@@ -11,8 +12,50 @@ function wylonObraz(img) {
     let opacity = 0;
     const x = setInterval(function() {
         img.style.opacity = opacity;
+        if(opacity >= 1){
+            clearInterval(x);
+        }
         opacity+=0.02;
     }, 20);
+}
+
+//Menu Hamburger 
+function menuHamburger() {
+    let czyWlaczony = true;
+
+    const hamburgerPanel = document.querySelector('.hamburger');
+    
+    let menuPanels = Array.from(document.querySelectorAll('.menu > li'));
+    menuPanels.shift();
+    
+    menuPanels.forEach(panel=> {
+        panel.classList.add("liAktywny");
+    })
+
+    hamburgerPanel.addEventListener('click', function() {
+        if(czyWlaczony) {
+            czyWlaczony = false;
+            menuPanels.forEach( panel => {
+                panel.classList.replace("liAktywny", "liNieaktywny")
+                
+            }) 
+
+        } else {
+            czyWlaczony = true;
+            menuPanels.forEach( panel => {
+                panel.classList.replace("liNieaktywny", "liPrzejscie_one")
+
+                const x = setTimeout(function() {
+                    panel.classList.replace("liPrzejscie_one", "liPrzejscie_two")
+                }, 20)
+
+                const y = setTimeout(function() {
+                    panel.classList.replace("liPrzejscie_two", "liAktywny")
+                }, 700)           
+                
+            })
+        }
+    })
 }
 
 //kontakt
@@ -105,32 +148,59 @@ kontakt.addEventListener('click', function() {
 
 const imgContainers = document.querySelectorAll('.ofertGridContainer > div');
 imgContainers.forEach( imgC => {
-    //imgC.addEventListener('mouseenter', pokazDetale);
-    //imgC.addEventListener('mouseleave', schowajDetale);
+    imgC.addEventListener('mouseenter', pokazDetale);
+    imgC.addEventListener('mouseleave', schowajDetale);
 })
 
 function pokazDetale() {
     const img = this.firstChild;
+
+    const realWidth = img.width;
+    img.style.transform = `translateY(${-(realWidth / (realWidth/100) )}px)`;
     
     const zakrywka = document.createElement('div');
-    zakrywka.style.backgroundColor = "#e7e7e7";
     zakrywka.style.width = "100%";
     zakrywka.style.height = "100%";
     zakrywka.style.display = "flex";
-    zakrywka.style.alignItems = "center";
+    zakrywka.style.alignItems = "flex-end";
+    zakrywka.style.justifyContent = "center";
+    zakrywka.style.flexWrap = "wrap";
     zakrywka.style.borderRadius = "1.2vw";
+
+    const text = document.createElement('p');
+    text.innerHTML = "25,99zł";
+    text.style.textAlign = "center";
+    text.style.color = "black"
+    text.style.backgroundColor = "#e7e7e7";
+    text.style.position = "absolute"
+    text.style.borderRadius = "1.2vw";
+    text.style.margin = "0";
+    text.style.width = `${realWidth}px`
+
+    this.style.alignItems = "flex-end"
 
     this.appendChild(zakrywka);
     zakrywka.appendChild(img);
+    zakrywka.appendChild(text);
 }
 
 function schowajDetale() {
-    const zakrywka = this.firstChild;
-    const img = zakrywka.firstChild;
+
+    const zakrywka = this.firstChild;    
+    const img = zakrywka.children[0];
+    const text = zakrywka.children[1];
+
+
+    this.style.alignItems = "center";
+    img.style.transform = `translateY(0px)`;
 
     this.appendChild(img);
+    text.remove();
+    zakrywka.remove();
     
 }
+
+
 
 
 //artykuly 

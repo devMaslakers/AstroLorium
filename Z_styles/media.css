@@ -1,6 +1,13 @@
 @media screen and (max-width: 1200px) {
+    #background > img {
+        width: auto !important;
+        height: auto !important;
+        
+    }
+    
     nav {
         background-color: rgba(0, 0, 0, 0);
+        margin-bottom: 15vh;
     }
     .menu {
         flex-wrap: wrap;
@@ -10,11 +17,41 @@
         width: 100vw;
     }
     .menu > .logo {
-        width: 100vw;
+        width: 100vw !important;
         background-color: rgba(0, 98, 245, 0.1);
     }
+    .logo > a {
+        width: 75% !important;
+        text-align: center !important;
+    }
+    .hamburger {
+        display: flex !important;
+    }
+    .zamykacz {
+        display: block !important;
+    }
+
     header {
-        margin-top: 25vh;
+        margin-top: 0vh !important;
+    }
+
+
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+    }
+
+    .gridContainer .galeriaItem{
+        grid-row: auto !important;
+        grid-column: auto !important;
+    }
+    .galeriaItem img {
+        height: auto !important;
+        transform: translateY(-25%);
+    }
+
+    .ofertContainer {
+        height: 48vh;
     }
 }
 
@@ -47,6 +84,10 @@
         font-size: 2vw !important;
     }
 
+    .ofertContainer {
+        height: 40vh !important;
+    }
+
 }
 @media screen and (max-width: 800px) {
     html {
@@ -61,6 +102,20 @@
     }
     .logo a {
         font-size: 7vw !important;
+        width: 50% !important;
+    }
+    .logoWypelniacz {
+        width: 25% !important;
+    }
+    .hamburger {
+        height: 80%;
+    }
+    .hamburger > div {
+        width: 15vw;
+        height: 1.8vh;
+    }
+    .zamykacz {
+        width: 25% !important;
     }
 
 
@@ -75,4 +130,66 @@
     .artNakladka {
         font-size: 2.5vw;
     }
+
+    #background > img {
+        transform: translateX(-15%);
+    }
+
+
+    .ofertGridContainer {
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(3, 1fr) !important;
+
+        row-gap: 1.5vh;
+    }
+    .ofertGridContainer img {
+        overflow: hidden;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    .ofertContainer {
+        height: 100vh !important;
+    }
+
+
+}
+
+@media screen and (max-width: 540px) {
+    header {
+        margin-top: 8vh !important;
+    }
+    main {
+        margin-top: 10vh !important;
+    }
+    #artykul {
+        margin-top: 10vh !important;
+    }
+
+    .hamburger {
+        height: 60% !important;
+    }
+
+    .hamburger > div {
+        height: 1.2vh !important;
+    }
+
+
+    #galeria {
+        margin-top: 10vh !important;
+    }
+    .galContainer {
+        height: 150vh !important;
+    }
+    .gridContainer {
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(12, 1fr) !important;
+        
+        row-gap: 1.5vh !important;
+    }
+
+    .gridContainer .galeriaItem{
+        grid-row: span 2 !important;
+        grid-column: auto !important;
+    } 
 }

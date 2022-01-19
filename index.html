@@ -8,6 +8,9 @@
     <meta name="description" content="Znajdziesz tutaj niesamowite zdjecia, informacje i koszulki, które zaspokoją twój ciekawski umysł">
     <meta name="robots" content="noindex, nofollow">
 
+    <meta name="author" content="Mateusz Mańka">
+    <meta name="copyright" content="Mateusz Mańka">
+
     <!-- Stylowanie -->
     <link href="Z_styles/mainStyle.css" rel="stylesheet">
     <link href="Z_styles/elementStyle.css" rel="stylesheet">
@@ -23,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
 
-    <!-- https://www.fontspace.com/fast-hand-font-f52404 -->
+    <!--Link do uzytego Fontu: https://www.fontspace.com/fast-hand-font-f52404 -->
     <link rel="stylesheet" href="spaceFont/stylesheet.css" type="text/css" charset="utf-8" />
 
     <title>Astrolorium</title>
@@ -31,7 +34,13 @@
 <body>
     <nav>
         <ul class="menu">
-            <li class="logo"><a href="">Astrolorium</a></li>
+            <li class="logo">
+                <div class="logoWypelniacz">
+                    <div class="hamburger"><div></div><div></div><div></div></div>
+                </div>
+                <a href="">Astrolorium</a>
+                <div class="zamykacz"></div>
+            </li>
             <li><a href="#artykul">Artykuly</a></li>
             <li><a href="#galeria">Galeria</a></li>
             <li><a href="#oferta">Oferta</a></li>
@@ -88,12 +97,12 @@
             <p>Galeria</p>
             <div class="galContainer">
                 <div class="gridContainer">
-                    <div class="galeriaItem"></div>
-                    <div class="galeriaItem"></div>
-                    <div class="galeriaItem"></div>
-                    <div class="galeriaItem"></div>
-                    <div class="galeriaItem"></div>
-                    <div class="galeriaItem"></div>
+                    <div class="galeriaItem"><img src="zdjecia/galeria/hubble.jpg" alt="czlowiek w Kosmosie"></div>
+                    <div class="galeriaItem"><img src="zdjecia/galeria/Ingenuity.png" alt="Pokolorowany obraz mgławicy"></div>
+                    <div class="galeriaItem"><img src="zdjecia/galeria/astronauta.jpg" alt="Łazik Ingenuity"></div>
+                    <div class="galeriaItem"><img src="zdjecia/galeria/artemis.jpg" alt="Artemis"></div>
+                    <div class="galeriaItem"><img src="zdjecia/galeria/webb2.jpg" alt="Teleskop Webb'a Numer 1"></div>
+                    <div class="galeriaItem"><img src="zdjecia/galeria/webb1.jpg" alt="Teleskop Webb'a Numer 2"></div>
                 </div>
             </div>
         </section>
@@ -102,9 +111,9 @@
             <p>Oferta</p>
             <div class="ofertContainer">
                 <div class="ofertGridContainer">
-                    <div class="ofertItem1"><img src="zdjecia/oferty/koszulka1.png" alt="koszulka nr1"></div>
-                    <div class="ofertItem2"><img src="zdjecia/oferty/koszulka2.png" alt="koszulka nr2"></div>
-                    <div class="ofertItem3"><img src="zdjecia/oferty/koszulka3.png" alt="koszulka nr3"></div>
+                    <div class="ofertItem1"><img src="zdjecia/oferty/koszulka1.png" alt="koszulka Feynmana"></div>
+                    <div class="ofertItem2"><img src="zdjecia/oferty/koszulka2.png" alt="koszulka Czarna Dziura"></div>
+                    <div class="ofertItem3"><img src="zdjecia/oferty/koszulka3.png" alt="koszulka Mrozna Planeta"></div>
                 </div>
             </div>
         </section>

@@ -9,6 +9,7 @@
     width: 100%;
     height: 100vh;
     
+    background-color: black;
 }
 #background > img {
     width: 100%;
@@ -39,12 +40,60 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transform: translateY(0px);
 }
 .menu > .logo {
     width: 22vw;
+    display: flex;
+    justify-content: center;
 }
 .menu > .logo > a{
     font-size: 40px;   
+}
+
+.logoWypelniacz {
+    display: flex;
+
+    width: 12.5%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hamburger {
+    display: none;
+
+    width: 90%;
+    height: 90%;
+    border-radius: 1vw;
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    cursor: pointer;
+}
+.hamburger:hover {
+    background-color: rgba(245, 245, 245, 0.1);
+}
+.hamburger > div {
+    background-color: whitesmoke;
+
+    width: 10vw;
+    height: 2vh;
+    border-radius: 1vw;
+
+    margin: 0;
+    padding: 0;
+}
+.zamykacz {
+    display: none;
+
+    width: 12.5%;
+    height: 100%;
 }
 
 
